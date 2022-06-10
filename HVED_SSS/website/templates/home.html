@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Home - Welcome{% endblock %}
+
+{% block content %}
+<!-- <h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="noted">
+    {% for note in user.notes %}
+    <li class="list-group-item">{{ note.data }}
+        passing the respective note id to delete 
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+<br />   -->
+<form method="POST">
+    <div align="center">
+        {% for f in totalFiles %}
+        <a href="" onclick="decryptFile(); return false;">Encrypted File {{ f+1 }}</a>
+        <br />
+        {% endfor %}
+        <br />
+    </div>
+</form>
+{% endblock %}
